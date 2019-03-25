@@ -1,0 +1,13 @@
+﻿  pch.cpp
+  AlcoholDrinks.cpp
+  Beer.cpp
+d:\программирование\ms vc++\classdrinks\classdrinks\beer.cpp(9): warning C4305: аргумент: усечение из "double" в "float"
+  ClassDrinks.cpp
+  Cognac.cpp
+  Drinks.cpp
+  Milk.cpp
+  MineralWater.cpp
+  NonAlcoholDrinks.cpp
+  wine.cpp
+  Создание кода...
+  ClassDrinks.vcxproj -> D:\Программирование\MS VC++\ClassDrinks\Debug\ClassDrinks.exe
