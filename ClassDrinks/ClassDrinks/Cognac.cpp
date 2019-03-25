@@ -15,7 +15,7 @@ Cognac::Cognac(const char* nm, double vol, float abv, cognacClass cl, const char
 void Cognac::setClass(cognacClass cl)
 {
 	if (cl < cognacClass::ZEROZERO || cl > cognacClass::XO)
-		throw exception("Для поля classCog допустимыми являются только значения: ZEROZERO, ZERO, ONE, VS, SUPERIOR, VSOP, VVSOP, XO.");
+		throw exception("Р”Р»СЏ РїРѕР»СЏ classCog РґРѕРїСѓСЃС‚РёРјС‹РјРё СЏРІР»СЏСЋС‚СЃСЏ С‚РѕР»СЊРєРѕ Р·РЅР°С‡РµРЅРёСЏ: ZEROZERO, ZERO, ONE, VS, SUPERIOR, VSOP, VVSOP, XO.");
 
 	classCog = cl;
 }
@@ -39,7 +39,7 @@ void Cognac::setRegion(const char* reg)
 void Cognac::setABV(float alc)
 {
 	if (alc < 40 || alc > 50)
-		throw exception("Градус коньяка варьируется в диапазоне от 40 до 50 %.");
+		throw exception("Р“СЂР°РґСѓСЃ РєРѕРЅСЊСЏРєР° РІР°СЂСЊРёСЂСѓРµС‚СЃСЏ РІ РґРёР°РїР°Р·РѕРЅРµ РѕС‚ 40 РґРѕ 50 %.");
 	AlcoholDrinks::setABV(alc);
 }
 
@@ -61,10 +61,10 @@ char* Cognac::getRegion() const
 ostream& operator << (ostream & os, const Cognac& cogn)
 {
 	if (&cogn == NULL)
-		throw exception("Попытка вывода несуществующего объекта!");
+		throw exception("РџРѕРїС‹С‚РєР° РІС‹РІРѕРґР° РЅРµСЃСѓС‰РµСЃС‚РІСѓСЋС‰РµРіРѕ РѕР±СЉРµРєС‚Р°!");
 
-	os << cogn.getName() << ", объём: " << cogn.getVol() << ", крепость: " << cogn.getABV()
-		<< ", класс: " << cogn.getClass() << ", сорт винограда: " << cogn.getSpecies() << ", регион: "
+	os << cogn.getName() << ", РѕР±СЉС‘Рј: " << cogn.getVol() << ", РєСЂРµРїРѕСЃС‚СЊ: " << cogn.getABV()
+		<< ", РєР»Р°СЃСЃ: " << cogn.getClass() << ", СЃРѕСЂС‚ РІРёРЅРѕРіСЂР°РґР°: " << cogn.getSpecies() << ", СЂРµРіРёРѕРЅ: "
 		<< cogn.getRegion();
 
 	return os;
