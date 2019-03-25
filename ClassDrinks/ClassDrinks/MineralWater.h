@@ -3,7 +3,7 @@
 
 enum class minWatPurposes { MEDICAL, MEDICALFEEDING, FEEDING };
 
-static const char* prpses[] = { "лечебная", "лечебно-столовая", "столовая" };
+static const char* prpses[] = { "Р»РµС‡РµР±РЅР°СЏ", "Р»РµС‡РµР±РЅРѕ-СЃС‚РѕР»РѕРІР°СЏ", "СЃС‚РѕР»РѕРІР°СЏ" };
 inline ostream& operator << (ostream& os, const minWatPurposes& pr)
 {
 	os << prpses[(int)pr];
