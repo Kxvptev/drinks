@@ -16,7 +16,7 @@ Wine::Wine(const char* nm, double vol, float abv, wineColors clr, const char* co
 void Wine::setColor(wineColors clr)
 {
 	if (clr < wineColors::GRAY || clr > wineColors::BURGUNDY)
-		throw exception("Для поля color допустимыми являются только значения: GRAY, ORANGE, RED, ROSE, TAWNY, WHITE, YELLOW, BURGUNDY.");
+		throw exception("Р”Р»СЏ РїРѕР»СЏ color РґРѕРїСѓСЃС‚РёРјС‹РјРё СЏРІР»СЏСЋС‚СЃСЏ С‚РѕР»СЊРєРѕ Р·РЅР°С‡РµРЅРёСЏ: GRAY, ORANGE, RED, ROSE, TAWNY, WHITE, YELLOW, BURGUNDY.");
 	color = clr;
 }
 
@@ -39,9 +39,9 @@ void Wine::setKind(const char* knd)
 void Wine::setAge(int a)
 {
 	if (a < 0)
-		throw exception("Возраст не может быть отрицательным!");
+		throw exception("Р’РѕР·СЂР°СЃС‚ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рј!");
 	if (a > 100)
-		throw exception("Такое вино не имеет гастрономической ценности или не может существовать.");
+		throw exception("РўР°РєРѕРµ РІРёРЅРѕ РЅРµ РёРјРµРµС‚ РіР°СЃС‚СЂРѕРЅРѕРјРёС‡РµСЃРєРѕР№ С†РµРЅРЅРѕСЃС‚Рё РёР»Рё РЅРµ РјРѕР¶РµС‚ СЃСѓС‰РµСЃС‚РІРѕРІР°С‚СЊ.");
 
 	age = a;
 }
@@ -49,7 +49,7 @@ void Wine::setAge(int a)
 void Wine::setABV(float alc)
 {
 	if (alc < 8|| alc > 20)
-		throw exception("Градус вина варьируется в диапазоне от 8 до 20 %.");
+		throw exception("Р“СЂР°РґСѓСЃ РІРёРЅР° РІР°СЂСЊРёСЂСѓРµС‚СЃСЏ РІ РґРёР°РїР°Р·РѕРЅРµ РѕС‚ 8 РґРѕ 20 %.");
 	AlcoholDrinks::setABV(alc);
 }
 
@@ -76,11 +76,11 @@ int Wine::getAge() const
 ostream& operator << (ostream & os, const Wine& wine)
 {
 	if (&wine == NULL)
-		throw exception("Попытка вывода несуществующего объекта!");
+		throw exception("РџРѕРїС‹С‚РєР° РІС‹РІРѕРґР° РЅРµСЃСѓС‰РµСЃС‚РІСѓСЋС‰РµРіРѕ РѕР±СЉРµРєС‚Р°!");
 
-	os << wine.getName() << ", объём: " << wine.getVol() << ", крепость: " << wine.getABV()
-		<< ", цвет: " << wine.getColor() << ", страна: " << wine.getCountry() << ", сорт: "
-		<< wine.getKind() << ", возраст (в годах): " << wine.getAge();
+	os << wine.getName() << ", РѕР±СЉС‘Рј: " << wine.getVol() << ", РєСЂРµРїРѕСЃС‚СЊ: " << wine.getABV()
+		<< ", С†РІРµС‚: " << wine.getColor() << ", СЃС‚СЂР°РЅР°: " << wine.getCountry() << ", СЃРѕСЂС‚: "
+		<< wine.getKind() << ", РІРѕР·СЂР°СЃС‚ (РІ РіРѕРґР°С…): " << wine.getAge();
 
 	return os;
 }
