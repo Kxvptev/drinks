@@ -13,7 +13,7 @@ Milk::Milk(const char* nm, double vol, nonAlcDrinkType tp, milkSpecies sp, float
 void Milk::setSpecies(milkSpecies sp)
 {
 	if (sp < milkSpecies::COW || sp > milkSpecies::SHEEP)
-		throw exception("Поле species может принимать только: COW, MOOSE, GOAT, DEER, CAMEL, SHEEP.");
+		throw exception("РџРѕР»Рµ species РјРѕР¶РµС‚ РїСЂРёРЅРёРјР°С‚СЊ С‚РѕР»СЊРєРѕ: COW, MOOSE, GOAT, DEER, CAMEL, SHEEP.");
 
 	species = sp;
 }
@@ -21,7 +21,7 @@ void Milk::setSpecies(milkSpecies sp)
 void Milk::setFat(float fat)
 {
 	if (fat < 0 || fat > 6)
-		throw exception("Жирность молоко варьируется от 0 до 6 %.");
+		throw exception("Р–РёСЂРЅРѕСЃС‚СЊ РјРѕР»РѕРєРѕ РІР°СЂСЊРёСЂСѓРµС‚СЃСЏ РѕС‚ 0 РґРѕ 6 %.");
 
 	fatness = fat;
 }
@@ -39,10 +39,10 @@ float Milk::getFat() const
 ostream& operator << (ostream & os, const Milk& mlk)
 {
 	if (&mlk == NULL)
-		throw exception("Попытка вывода несуществующего объекта!");
+		throw exception("РџРѕРїС‹С‚РєР° РІС‹РІРѕРґР° РЅРµСЃСѓС‰РµСЃС‚РІСѓСЋС‰РµРіРѕ РѕР±СЉРµРєС‚Р°!");
 
-	os << mlk.getName() << ", " << mlk.getType() << ", объём: " << mlk.getVol() << ", "
-		<< mlk.getSpecies() << ", жирность: " << mlk.getFat() << "%";
+	os << mlk.getName() << ", " << mlk.getType() << ", РѕР±СЉС‘Рј: " << mlk.getVol() << ", "
+		<< mlk.getSpecies() << ", Р¶РёСЂРЅРѕСЃС‚СЊ: " << mlk.getFat() << "%";
 
 	return os;
 }
