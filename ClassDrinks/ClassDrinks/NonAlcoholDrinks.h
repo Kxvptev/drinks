@@ -3,7 +3,7 @@
 
 enum class nonAlcDrinkType {COLD, HOT};
 
-static const char* types[] = { "холодный напиток", "горячий напиток" };
+static const char* types[] = { "С…РѕР»РѕРґРЅС‹Р№ РЅР°РїРёС‚РѕРє", "РіРѕСЂСЏС‡РёР№ РЅР°РїРёС‚РѕРє" };
 inline ostream& operator << (ostream& os, const nonAlcDrinkType& tp)
 {
 	os << types[(int)tp];
