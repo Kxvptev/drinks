@@ -14,9 +14,9 @@ MineralWater::MineralWater(const char* nm, double vol, nonAlcDrinkType tp, int m
 void MineralWater::setMineral(int min)
 {
 	if (min < 0)
-		throw exception("Степень минерализации не может быть отицательной!");
+		throw exception("РЎС‚РµРїРµРЅСЊ РјРёРЅРµСЂР°Р»РёР·Р°С†РёРё РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РѕС‚РёС†Р°С‚РµР»СЊРЅРѕР№!");
 	if (min > 15)
-		throw exception("Вода со степенью минерализации выше 15 не пригодна к употреблению.");
+		throw exception("Р’РѕРґР° СЃРѕ СЃС‚РµРїРµРЅСЊСЋ РјРёРЅРµСЂР°Р»РёР·Р°С†РёРё РІС‹С€Рµ 15 РЅРµ РїСЂРёРіРѕРґРЅР° Рє СѓРїРѕС‚СЂРµР±Р»РµРЅРёСЋ.");
 
 	mineralization = min;
 }
@@ -24,7 +24,7 @@ void MineralWater::setMineral(int min)
 void MineralWater::setPurpose(minWatPurposes pr)
 {
 	if (pr < minWatPurposes::MEDICAL || pr > minWatPurposes::FEEDING)
-		throw exception("Поле purpose может принимать только: MEDICAL, MEDICALFEEDING, FEEDING.");
+		throw exception("РџРѕР»Рµ purpose РјРѕР¶РµС‚ РїСЂРёРЅРёРјР°С‚СЊ С‚РѕР»СЊРєРѕ: MEDICAL, MEDICALFEEDING, FEEDING.");
 
 	purpose = pr;
 }
@@ -42,10 +42,10 @@ minWatPurposes MineralWater::getPurpose() const
 ostream& operator << (ostream & os, const MineralWater& mw)
 {
 	if (&mw == NULL)
-		throw exception("Попытка вывода несуществующего объекта!");
+		throw exception("РџРѕРїС‹С‚РєР° РІС‹РІРѕРґР° РЅРµСЃСѓС‰РµСЃС‚РІСѓСЋС‰РµРіРѕ РѕР±СЉРµРєС‚Р°!");
 
-	os << mw.getName() << ", " << mw.getType() << ", объём: " << mw.getVol()
-		<< ", " << mw.getPurpose() << ", минерализация: " << mw.getMineral();
+	os << mw.getName() << ", " << mw.getType() << ", РѕР±СЉС‘Рј: " << mw.getVol()
+		<< ", " << mw.getPurpose() << ", РјРёРЅРµСЂР°Р»РёР·Р°С†РёСЏ: " << mw.getMineral();
 
 	return os;
 }
