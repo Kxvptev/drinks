@@ -26,14 +26,14 @@ void Drinks::setName(const char* nm)
 void Drinks::setVol(double vol)
 {
 	if (vol < 0)
-		throw exception("Îáú¸ì íå ìîæåò áûòü îòðèöàòåëüíûì!");
+		throw exception("ÐžÐ±ÑŠÑ‘Ð¼ Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ð¾Ñ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ð¼!");
 
 	packageVol = vol;
 }
 
 ostream& Drinks::print(ostream& os) const
 {
-	os << getName() << ", îáú¸ì: " << getVol();
+	os << getName() << ", Ð¾Ð±ÑŠÑ‘Ð¼: " << getVol();
 	
 	return os;
 }
