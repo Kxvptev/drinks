@@ -14,7 +14,7 @@ nonAlcDrinkType NonAlcoholDrinks::getType() const
 void NonAlcoholDrinks::setType(nonAlcDrinkType t)
 {
 	if (t != nonAlcDrinkType::COLD && t != nonAlcDrinkType::HOT)
-		throw exception("Тип безалкогольного напитка может задаваться только двумя значениями: HOT и COLD");
+		throw exception("РўРёРї Р±РµР·Р°Р»РєРѕРіРѕР»СЊРЅРѕРіРѕ РЅР°РїРёС‚РєР° РјРѕР¶РµС‚ Р·Р°РґР°РІР°С‚СЊСЃСЏ С‚РѕР»СЊРєРѕ РґРІСѓРјСЏ Р·РЅР°С‡РµРЅРёСЏРјРё: HOT Рё COLD");
 	type = t;
 }
 
