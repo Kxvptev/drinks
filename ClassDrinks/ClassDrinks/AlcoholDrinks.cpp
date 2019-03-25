@@ -14,7 +14,7 @@ float AlcoholDrinks::getABV() const
 void AlcoholDrinks::setABV(float alc)
 {
 	if (alc < 0 || alc > 100)
-		throw exception("Градус задаётся неотрицательным числом в диапазоне от 0 до 100 %.");
+		throw exception("Р“СЂР°РґСѓСЃ Р·Р°РґР°С‘С‚СЃСЏ РЅРµРѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рј С‡РёСЃР»РѕРј РІ РґРёР°РїР°Р·РѕРЅРµ РѕС‚ 0 РґРѕ 100 %.");
 	abv = alc;
 }
 
