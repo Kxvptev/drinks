@@ -5,21 +5,21 @@ enum class rawMaterial {BARLEY, WHEAT, RYE, RICE, MAIZE};
 enum class beerColors {LIGHT, DARK, RED, WHITE, COPPER, BROWN, BLACK};
 enum class fermentationTypes {LOWER, UPPER};
 
-static const char* rawM[] = { "ячмень", "пшеница", "рожь", "рис", "кукуруза" };
+static const char* rawM[] = { "СЏС‡РјРµРЅСЊ", "РїС€РµРЅРёС†Р°", "СЂРѕР¶СЊ", "СЂРёСЃ", "РєСѓРєСѓСЂСѓР·Р°" };
 inline ostream& operator << (ostream& os, const rawMaterial& rm)
 {
 	os << rawM[(int)rm];
 	return os;
 }
 
-static const char* colors[] = { "светлое", "тёмное", "красное", "белое", "медное", "коричневое", "чёрное" };
+static const char* colors[] = { "СЃРІРµС‚Р»РѕРµ", "С‚С‘РјРЅРѕРµ", "РєСЂР°СЃРЅРѕРµ", "Р±РµР»РѕРµ", "РјРµРґРЅРѕРµ", "РєРѕСЂРёС‡РЅРµРІРѕРµ", "С‡С‘СЂРЅРѕРµ" };
 inline ostream& operator << (ostream& os, const beerColors& clr)
 {
 	os << colors[(int)clr];
 	return os;
 }
 
-static const char* fermTypes[] = { "низовое брожение", "верховое брожение" };
+static const char* fermTypes[] = { "РЅРёР·РѕРІРѕРµ Р±СЂРѕР¶РµРЅРёРµ", "РІРµСЂС…РѕРІРѕРµ Р±СЂРѕР¶РµРЅРёРµ" };
 inline ostream& operator << (ostream& os, const fermentationTypes& f)
 {
 	os << fermTypes[(int)f];
