@@ -3,7 +3,7 @@
 
 enum class milkSpecies { COW, MOOSE, GOAT, DEER, CAMEL, SHEEP };
 
-static const char* spec[] = { "коровье", "лосиное", "козлиное", "оленье", "верблюжье", "овечье" };
+static const char* spec[] = { "РєРѕСЂРѕРІСЊРµ", "Р»РѕСЃРёРЅРѕРµ", "РєРѕР·Р»РёРЅРѕРµ", "РѕР»РµРЅСЊРµ", "РІРµСЂР±Р»СЋР¶СЊРµ", "РѕРІРµС‡СЊРµ" };
 inline ostream& operator << (ostream& os, const milkSpecies& sp)
 {
 	os << spec[(int)sp];
